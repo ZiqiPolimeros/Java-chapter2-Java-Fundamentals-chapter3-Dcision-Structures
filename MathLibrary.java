@@ -8,11 +8,6 @@ package mathlibrary;
 import java.util.Scanner;
 import java.util.Calendar;
 import java.util.TimeZone;
-import java.util.Date;
-import java.util.TimeZone;
-
-
-
 
 public class MathLibrary {
 
@@ -30,10 +25,8 @@ public class MathLibrary {
          System.out.println("Welcome to Math Library --- Day Calculator!\n"+
                             "\n"+
                             "Math Library will calculate what day of the week it is after so many days have passed. \n"+
-                            ""+
-                 //
                             "Please type in how many days you want to calculate. \n"+
-                            "Remember to press ENTER after your answer."
+                            "Remember to press ENTER."
                             );
          days = keyboad.nextInt();
          while( days <= 0  ){
@@ -43,28 +36,28 @@ public class MathLibrary {
          if(days > 0){
                 d = (days + currentDayOfWeek)%7;
         
-switch ( d ) {
-  case 1:
-    System.out.println("Sunday");
-    break;
-  case 2:
-    System.out.println("Monday");
-    break;
-  case 3:
-    System.out.println("Tuesday");
-    break;
-  case 4:
-    System.out.println("Wednesday");
-    break;
-  case 5:
-    System.out.println("Thursday");
-    break;
-  case 6:
-    System.out.println("Friday");
-    break;
-  case 7:
-    System.out.println("Saturday");
-    break;
+               switch ( d ) {
+               case 1:
+               System.out.println("Sunday");
+               break;
+               case 2:
+               System.out.println("Monday");
+               break;
+               case 3:
+               System.out.println("Tuesday");
+               break;
+               case 4:
+               System.out.println("Wednesday");
+               break;
+               case 5:
+               System.out.println("Thursday");
+               break;
+               case 6:
+               System.out.println("Friday");
+               break;
+               case 7:
+               System.out.println("Saturday");
+               break;
 }
    }  
     }
