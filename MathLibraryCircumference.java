@@ -7,7 +7,7 @@ package mathlibrarycircumference;
  */
 import java.util.Scanner;
 import java.text.DecimalFormat;
-import java.lang.Math.*;
+import java.lang.Math;
 
 public class MathLibraryCircumference {
 
@@ -27,18 +27,24 @@ public class MathLibraryCircumference {
                            "Remember to press ENTER for your answer. \n"); 
         Scanner d = new Scanner(System.in);
         diameter = d.nextDouble();
-        circumference = diameter * Math.PI;
-        DecimalFormat twoDForm = new DecimalFormat("#.00");
-        System.out.println("The circumferece is "+ twoDForm.format(circumference) +".");
-        System.out.println("");
-        System.out.println("Would you like to calculate " + 
+        while(diameter<=0){
+            System.out.println("Please type in a number which is bigger than zero.");
+            diameter = d.nextDouble();
+        }
+        if(diameter>0){
+            circumference = diameter * Math.PI;
+            DecimalFormat twoDForm = new DecimalFormat("#.00");
+            System.out.println("The circumferece is "+ twoDForm.format(circumference) +".");
+            System.out.println("Would you like to calculate " + 
                     "another circle?"); 
+         }
             System.out.print("Enter Y for yes or N for no: "); 
             input = d.nextLine();
             input = d.nextLine();            
-            repeat = input.charAt(0);       
-    } while (repeat == 'Y' || repeat == 'y'); 
-    
-                }
+            repeat = input.charAt(0);           
+    }while (repeat == 'Y' || repeat == 'y'); 
+              
+    }
 }
+
 
