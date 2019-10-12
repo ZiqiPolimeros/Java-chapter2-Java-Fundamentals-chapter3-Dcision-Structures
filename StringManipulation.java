@@ -1,10 +1,7 @@
 
 package stringmanipulation;
 
-/**
- *
- * @author Ziqi
- */
+
 import java.util.Scanner;
 import java.lang.String;
 
@@ -15,7 +12,10 @@ public class StringManipulation {
         String str1;
         String str2;
         String sentence1;
+        String sentence11;
         String sentence2;
+        String sentence22;
+        
         
         int i;
         int count = 0;
@@ -29,10 +29,13 @@ public class StringManipulation {
         Scanner keyboad = new Scanner(System.in);
         str1 = keyboad.nextLine();
         sentence1 = str1.toUpperCase();
+        sentence11 = sentence1.trim();
         System.out.println("Please proivde us with your second sentence:\n" +
                            "prompt>  ");
         str2 = keyboad.nextLine();
         sentence2 = str2.toUpperCase();
+        sentence22 = sentence2.trim();
+        
         
           
     
@@ -40,21 +43,25 @@ public class StringManipulation {
       if (Character.isLetter(str1.charAt(i)))
         count++;
     }
-    System.out.println(count + " letters.");
+    System.out.println(count + " letters. \n" +
+            "the first sentence hash Code is " + sentence11.hashCode() +"\n" +
+            "the second sentence hash Code is " + sentence22.hashCode()
+    );
                        
    
         
-        if( sentence1 == sentence2 ){
+        if( sentence11.hashCode() == ( sentence22.hashCode()) ){
             System.out.println("It appears that both of these sentences are the same!\n" +
                                "\n" +
-                               "The length of the sentence is" + count + " characters!\n" +
+                               "The length of the sentence is " + count + " characters!\n" +
                                "\n" +
                                "Thank you for using the StringManipulation program! Bye!");
         }else{
             System.out.println("Note the two sentences are not equals. \n" +
-                               "This is because == compares both Strings to see if they occupy the same space in memory.\n"+
-                               "It is not concerned with the contents of the String variable.\n"+
-                               "== only turns true when the memory address the Strings are stored at in RAM is the same!");
+                               "The first sentence is " + sentence11.length() + " letters. \n"+
+                               
+                               "The second sentence is " + sentence22.length() + " letters.\n" +
+                               "Thank you for using the StringManipulation program! Bye!");
             
         }
         
