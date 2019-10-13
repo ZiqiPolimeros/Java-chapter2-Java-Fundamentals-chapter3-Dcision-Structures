@@ -43,13 +43,11 @@ public class StringManipulation {
       if (Character.isLetter(str1.charAt(i)))
         count++;
     }
-    System.out.println(count + " letters. \n" +
+    /*System.out.println(count + " letters. \n" +
             "the first sentence hash Code is " + sentence11.hashCode() +"\n" +
-            "the second sentence hash Code is " + sentence22.hashCode()
-    );
-                       
+            "the second sentence hash Code is " + sentence22.hashCode());
+     */
    
-        
         if( sentence11.hashCode() == ( sentence22.hashCode()) ){
             System.out.println("It appears that both of these sentences are the same!\n" +
                                "\n" +
